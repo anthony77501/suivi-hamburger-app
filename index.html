@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi des Ventes de Hamburgers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .totals {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .sales, .extras {
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Suivi des Ventes de Hamburgers</h1>
+
+    <!-- Boutons pour entrer les commandes -->
+    <button onclick="addOrder('cheese')">チーズバーガー注文追加</button>
+    <button onclick="addOrder('avocadoCheese')">アボカドチーズバーガー注文追加</button>
+    <button onclick="addOrder('hawaiian')">ハワイアンバーガー注文追加</button>
+
+    <!-- Affichage des quantités vendues pour chaque type de hamburger -->
+    <div class="sales">
+        <p>チーズバーガー販売数 : <span id="cheeseTotal">0</span></p>
+        <p>アボカドチーズバーガー販売数 : <span id="avocadoCheeseTotal">0</span></p>
+        <p>ハワイアンバーガー販売数 : <span id="hawaiianTotal">0</span></p>
+    </div>
+
+    <!-- Affichage du nombre de clients ayant demandé un supplément -->
+    <div class="extras">
+        <p>チーズバーガー 追加チーズ数 : <span id="cheeseExtra">0</span></p>
+        <p>アボカドチーズバーガー 追加チーズ数 : <span id="avocadoCheeseExtra">0</span></p>
+        <p>アボカドチーズバーガー 追加アボカド数 : <span id="avocadoExtra">0</span></p>
+    </div>
+
+    <!-- Affichage des totaux globaux -->
+    <div class="totals">
+        <p>総販売数 (Total Ventes) : <span id="totalVentes">0</span></p>
+        <p>チーズバーガー単価 : 800 円</p>
+        <p>アボカドチーズバーガー単価 : 800 円</p>
+        <p>ハワイアンバーガー単価 : 800 円</p>
+        <p>本日の合計 (Total du Jour) : <span id="totalRevenu">0</span> 円</p>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
